@@ -8,7 +8,7 @@ from myProject.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('homePage/',homePage,name='homePage'),
-    path('loginPage/',loginPage,name='loginPage'),
+    path('',loginPage,name='loginPage'),
     path('logoutPage/',logoutPage,name='logoutPage'),
     path('registerPage/',registerPage,name='registerPage'),
     path('jobFeedPage/',jobFeedPage,name='jobFeedPage'),

@@ -1,5 +1,134 @@
 {% extends 'common/basePage.html' %}
 
 {% block body %}
-    <h1>This Is Job Feed Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Feed</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        #job-search {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        #search-btn {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #search-btn:hover {
+            background-color: #218838;
+        }
+        
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .job-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .job-card p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .apply-btn {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .apply-btn:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="job-search" placeholder="Search for jobs...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="job-listings">
+            <div class="job-card">
+                <h3>Frontend Developer</h3>
+                <p>Company: Tech Solutions</p>
+                <p>Location: Remote</p>
+                <p>Salary: $80,000 - $100,000</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Backend Developer</h3>
+                <p>Company: Code Masters</p>
+                <p>Location: New York, NY</p>
+                <p>Salary: $90,000 - $110,000</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>UI/UX Designer</h3>
+                <p>Company: Creative Agency</p>
+                <p>Location: San Francisco, CA</p>
+                <p>Salary: $70,000 - $90,000</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 {% endblock body %}
